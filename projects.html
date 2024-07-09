@@ -132,9 +132,7 @@
                         <p>We introduce a comprehensive framework known as the <em>Quantum Pixel Representation</em> (QPIXL), which encompasses all previously established quantum image representations and potentially many more.</p>
                         <p>Additionally, we present a novel technique for preparing QPIXL representations that requires fewer quantum gates compared to earlier methods, without the need for ancilla qubits. This approach utilizes an efficient synthesis technique for uniformly controlled rotations, employing only <span style="font-family: monospace;">RY</span> and controlled-NOT (<span style="font-family: monospace;">CX</span>) gates, making the circuits practical for the NISQ era.</p>
                         <p>For instance, the original FRQI state preparation method for an image with <span style="font-family: monospace;">N = 2<sup>n</sup></span> grayscale pixels uses <span style="font-family: monospace;">n+1</span> qubits in total (i.e., <span style="font-family: monospace;">n</span> qubits for encoding the position and 1 qubit for the color) and has a gate complexity of <span style="font-family: monospace;">O(N<sup>2</sup>)</span>. Recent improvements have reduced the FRQI gate complexity to <span style="font-family: monospace;">O(N log<sub>2</sub>N)</span> by introducing several extra ancilla qubits.</p>
-                        <p>In contrast, our QPIXL method for preparing an FRQI state achieves a gate complexity of <span style="font-family: monospace;">O(N)</span> without requiring additional ancilla qubits. Moreover, we introduce a compression strategy to further reduce the gate complexity of QPIXL representations.</p>
-                        <p>Our experiments demonstrate that this compression algorithm can reduce the gate complexity by up to 90% without significantly compromising image quality.</p>
-                        <p>An implementation of our algorithms is publicly available as part of the Quantum Image Pixel Library (<span style="font-family: monospace;">QPIXL++</span>), accessible at <a href="https://github.com/QuantumComputingLab" target="_blank">https://github.com/QuantumComputingLab</a>. <span style="font-family: monospace;">QPIXL++</span> is built on <span style="font-family: monospace;">QCLAB++</span>, facilitating the creation and representation of quantum circuits.</p>
+                        
                       </div>
                     </div>
                   </div>
@@ -143,7 +141,9 @@
                 <div class="col-xs-12 col-sm-6">
                   <div class="ci-text">
                     <img src="./Projects_files/qpixl_summary.JPG" align="center">                    
-
+                    <p>In contrast, our QPIXL method for preparing an FRQI state achieves a gate complexity of <span style="font-family: monospace;">O(N)</span> without requiring additional ancilla qubits. Moreover, we introduce a compression strategy to further reduce the gate complexity of QPIXL representations.</p>
+                        <p>Our experiments demonstrate that this compression algorithm can reduce the gate complexity by up to 90% without significantly compromising image quality.</p>
+                        <p>An implementation of our algorithms is publicly available as part of the Quantum Image Pixel Library (<span style="font-family: monospace;">QPIXL++</span>), accessible at <a href="https://github.com/QuantumComputingLab" target="_blank">https://github.com/QuantumComputingLab</a>. <span style="font-family: monospace;">QPIXL++</span> is built on <span style="font-family: monospace;">QCLAB++</span>, facilitating the creation and representation of quantum circuits.</p>
                   </div>
                 </div>
               </div>
