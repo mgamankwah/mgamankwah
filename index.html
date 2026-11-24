@@ -8,10 +8,10 @@ description: Mercy Amankwah is a data scientist at Dell Technologies and an appl
     <div class="hero-copy">
       <p class="eyebrow">Data science · Applied AI · Enterprise modernization</p>
       <h1>Mercy Amankwah<span class="hero-degree">, PhD</span></h1>
-      <p class="hero-thesis">Connecting mathematical depth, artificial intelligence, and business value.</p>
-      <p class="hero-intro">I’m a data scientist at Dell Technologies and an applied mathematician. My work uses data science, AI, and automation to modernize enterprise operations and support business decisions.</p>
+      <p class="hero-thesis">Bridging mathematical depth, technological innovation and business value.</p>
+      <p class="hero-intro">I am a data scientist at Dell Technologies with a foundation in applied mathematics and scientific research. My work focuses on applying AI, data science and intelligent automation to solve complex enterprise problems.</p>
       <div class="actions">
-        <a class="button button-light" href="{{ '/projects.html' | relative_url }}">Explore my work <span class="arrow arrow-external" aria-hidden="true"></span></a>
+        <a class="button button-light" href="{{ '/projects.html' | relative_url }}">Explore my work</a>
         <a class="button button-outline" href="{{ '/research.html' | relative_url }}">Research &amp; publications</a>
       </div>
     </div>
@@ -30,20 +30,24 @@ description: Mercy Amankwah is a data scientist at Dell Technologies and an appl
   <div class="wrap">
     <div class="section-heading">
       <h2 id="expertise">Areas of expertise</h2>
-      <p>Predictive modeling, automation, and scientific computing inform how I approach enterprise decisions and research questions.</p>
+      <p>Connecting analytical methods with the decisions, systems and scientific questions they can improve.</p>
     </div>
     <div class="expertise-grid">
       <div>
-        <h3>Applied AI</h3>
-        <p>Large language model evaluation, advanced mathematical reasoning, and exploration of emerging AI capabilities in enterprise workflows.</p>
+        <h3>Applied AI &amp; Machine Learning</h3>
+        <p>Predictive modeling, large language model evaluation and exploration of emerging AI capabilities in enterprise environments.</p>
       </div>
       <div>
-        <h3>Enterprise modernization</h3>
-        <p>Python automation and repeatable analytical workflows that support planning and operational decision-making.</p>
+        <h3>Enterprise Modernization</h3>
+        <p>Intelligent automation, business process improvement and modernization of operational decision-support systems.</p>
       </div>
       <div>
-        <h3>Mathematical modeling</h3>
-        <p>Predictive modeling, Bayesian inference, and uncertainty quantification for problems where the quality of the evidence matters.</p>
+        <h3>Mathematical &amp; Decision Science</h3>
+        <p>Bayesian inference, predictive modeling, inverse problems and decision-making under uncertainty.</p>
+      </div>
+      <div>
+        <h3>Scientific &amp; Computational Research</h3>
+        <p>Scientific computing, quantum algorithms, computational modeling and interdisciplinary research.</p>
       </div>
     </div>
   </div>
@@ -53,7 +57,7 @@ description: Mercy Amankwah is a data scientist at Dell Technologies and an appl
   <div class="wrap split-section">
     <div>
       <h2 id="professional-experience">Professional experience</h2>
-      <p>Enterprise data science, intelligent automation, and AI evaluation.</p>
+      <p>Modernizing enterprise operations, improving analytical workflows and working through complex business problems.</p>
       <a class="text-link" href="{{ '/experience.html' | relative_url }}">View full experience <span class="arrow" aria-hidden="true"></span></a>
     </div>
     <ul class="role-summary">
@@ -84,11 +88,13 @@ description: Mercy Amankwah is a data scientist at Dell Technologies and an appl
         <p class="eyebrow">Team project · Synthetic data</p>
         <h3><a href="{{ '/projects.html' | relative_url }}#alzheimers-risk">Alzheimer’s Disease Risk Prediction</a></h3>
         <p>Our team compared predictive models and calibrated risk estimates using synthetic data. I contributed exploratory analysis and feature-importance notebooks.</p>
+        {% include research-figure.html path="/assets/images/projects/alzheimers-feature-importance.jpg" width="3730" height="1200" label="Alzheimer’s model feature importance" alt="Team comparison of AdaBoost and XGBoost feature importance; cognitive assessments rank prominently in both models" caption="Original team feature-importance analysis. Synthetic data; not clinically validated." %}
       </article>
       <article>
-        <p class="eyebrow">Team project · Environmental modeling</p>
-        <h3><a href="{{ '/projects.html' | relative_url }}#chlorofish">ChloroFish</a></h3>
-        <p>Our team studied the relationship between chlorophyll and fishery measures, using model comparisons and prediction intervals to examine uncertainty.</p>
+        <p class="eyebrow">Doctoral research · Computational biomechanics</p>
+        <h3><a href="{{ '/projects.html' | relative_url }}#myobolica">MYOBOLICA</a></h3>
+        <p>My doctoral work used Bayesian inverse problems and computational modeling to estimate muscle recruitment and its uncertainty, informing collaborative publications.</p>
+        {% include research-figure.html path="/Projects_files/myobolica_img.JPG" width="1483" height="675" label="MYOBOLICA muscle recruitment" alt="Muscle activation curves and uncertainty bands alongside leg-muscle diagrams" caption="Muscle recruitment estimates from the collaborative MYOBOLICA research." %}
       </article>
     </div>
   </div>
@@ -98,17 +104,14 @@ description: Mercy Amankwah is a data scientist at Dell Technologies and an appl
   <div class="wrap research-grid">
     <div>
       <h2 id="research-highlights">Scientific research</h2>
-      <p>My doctoral research at Case Western Reserve University used Bayesian methods to study how muscles are recruited during movement. My collaborative research in quantum computing explored new ways to represent and compress images.</p>
+      <p>How can we infer what we cannot directly observe—and understand how certain we are? My doctoral work brought Bayesian inverse problems, uncertainty quantification and computational modeling to human movement. Collaborative work in quantum computing explored efficient data encoding, image representation and compression.</p>
       <ul class="inline-links">
         <li><a href="{{ '/research.html' | relative_url }}">Research overview</a></li>
         <li><a href="{{ '/publications.html' | relative_url }}">Publications</a></li>
         <li><a href="{{ '/talks.html' | relative_url }}">Presentations</a></li>
       </ul>
     </div>
-    <figure class="research-figure">
-      <img src="{{ '/Projects_files/myobolica_img.JPG' | relative_url }}" loading="lazy" width="1483" height="675" alt="Muscle activation curves with uncertainty bands alongside diagrams of leg muscles">
-      <figcaption>MYOBOLICA · Bayesian modeling of muscle recruitment</figcaption>
-    </figure>
+    {% include research-figure.html path="/Projects_files/myobolica_img.JPG" width="1483" height="675" label="Bayesian modeling of muscle recruitment" alt="Muscle activation curves with uncertainty bands alongside diagrams of leg muscles" caption="MYOBOLICA · Bayesian modeling of muscle recruitment." %}
   </div>
 </section>
 
@@ -116,8 +119,11 @@ description: Mercy Amankwah is a data scientist at Dell Technologies and an appl
   <div class="wrap split-section">
     <h2 id="leadership-background">Leadership &amp; background</h2>
     <div>
-      <p>I founded the SIAM Student Chapter at Case Western Reserve University and served as Vice President of the Graduate Council of Arts and Sciences, supporting professional development and mentorship.</p>
-      <a class="text-link" href="{{ '/about.html' | relative_url }}">About my background <span class="arrow" aria-hidden="true"></span></a>
+      <dl class="key-list">
+        <div><dt>Founding President · CWRU SIAM Student Chapter</dt><dd>Built a community for students to exchange ideas and connect through applied mathematics.</dd></div>
+        <div><dt>Vice President · Graduate Council of Arts and Sciences</dt><dd>Supported professional development, alumni engagement and mentorship opportunities for graduate students.</dd></div>
+      </dl>
+      <a class="text-link" href="{{ '/experience.html' | relative_url }}#experience-leadership">Explore my leadership experience</a>
     </div>
   </div>
 </section>

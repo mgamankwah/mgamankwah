@@ -1,5 +1,7 @@
 # Phase 3 portfolio review
 
+> **Phase 3B candidate (November 24, 2026):** The owner subsequently authorized the focused refinements in [Phase 3B review notes](portfolio-phase-3b.md). Those notes describe the current preview, evidence, screenshots, privacy decisions and test limitations. This original Phase 3 record remains historical context; Phase 4 has not begun.
+
 The feature branch adds the professional homepage, Experience, Projects, Research, About, and Contact. It uses one Jekyll layout, shared navigation and footer, and a responsive stylesheet in `assets/styles/portfolio.css`. The portfolio loads zero JavaScript and makes no external font requests. The two WebP portrait sizes are derived from the existing `img/profile1.jpg`. The original remains in the checkout and at its direct built URL.
 
 ## Route and content decisions

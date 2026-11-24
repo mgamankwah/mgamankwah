@@ -1,67 +1,85 @@
 ---
 layout: default
 title: Projects
-description: Selected work in predictive modeling, uncertainty quantification, and scientific computing.
+description: Technical work connecting predictive models, mathematical methods and scientific questions.
 ---
 {% include page-heading.html %}
-
-<div class="section compact">
-  <div class="wrap project-list">
-    <article class="project" id="alzheimers-risk">
-      <header>
-        <p class="eyebrow">Team project · 2025</p>
-        <h2>Alzheimer’s Disease Risk Prediction</h2>
-      </header>
-      <div class="project-detail">
-        <p>As part of an Erdos Institute team, I contributed exploratory analysis and feature-importance notebooks. Our team compared predictive models, examined feature importance, and calibrated probability estimates for risk assessment.</p>
-        <p>The project used synthetic data for exploratory modeling and did not establish clinical validity.</p>
-        <a class="text-link" href="https://github.com/mgamankwah/alzheimers_risk_prediction">View team repository <span class="arrow arrow-external" aria-hidden="true"></span></a>
-      </div>
-    </article>
-
-    <article class="project" id="chlorofish">
-      <header>
-        <p class="eyebrow">Team project · Environmental data</p>
-        <h2>ChloroFish</h2>
-      </header>
-      <div class="project-detail">
-        <p>Our team used Southeast Area Monitoring and Assessment Program data to study the relationship between chlorophyll and fishery measures. The project compared statistical and machine learning models, including neural networks, and explored prediction intervals for shrimp catch.</p>
-        <p>My documented contribution includes preparing a modified shrimp dataset.</p>
-        <a class="text-link" href="https://github.com/mgamankwah/ChloroFish">View team repository <span class="arrow arrow-external" aria-hidden="true"></span></a>
-      </div>
-    </article>
-
-    <article class="project" id="myobolica">
-      <header>
-        <p class="eyebrow">Doctoral research · Collaborative publications</p>
-        <h2>MYOBOLICA</h2>
-      </header>
-      <div class="project-detail">
-        <p>In my doctoral research, I used Bayesian inference to investigate which muscle recruitment patterns could explain observed movement and how uncertainty in those estimates changes over time. The related MYOBOLICA study describes a stochastic approach for estimating variability in muscle control.</p>
-        <a class="text-link" href="{{ '/research.html' | relative_url }}#bayesian-modeling">Research and publications <span class="arrow" aria-hidden="true"></span></a>
-      </div>
-    </article>
-
-    <article class="project" id="quantum-pixel">
-      <header>
-        <p class="eyebrow">Collaborative research · Quantum computing</p>
-        <h2>Quantum Pixel Representation and Compression</h2>
-      </header>
-      <div class="project-detail">
-        <p>Our research team developed quantum representations for multidimensional images and studied how image compression could reduce the resources needed for those representations. The published work describes the algorithms and compares examples at different compression levels.</p>
-        <a class="text-link" href="{{ '/research.html' | relative_url }}#quantum-computing">Quantum research <span class="arrow" aria-hidden="true"></span></a>
-      </div>
-    </article>
-
-    <article class="project" id="food-environment-atlas">
-      <header>
-        <p class="eyebrow">Team project · Public data</p>
-        <h2>Food Environment Atlas</h2>
-      </header>
-      <div class="project-detail">
-        <p>Our team used U.S. Department of Agriculture data to model county-level diabetes prevalence using food access and socioeconomic indicators. The analysis related county characteristics to reported prevalence at the population level.</p>
-        <a class="text-link" href="https://github.com/db4014/food-atlas-2024">View team repository <span class="arrow arrow-external" aria-hidden="true"></span></a>
-      </div>
-    </article>
+<nav class="research-nav" aria-label="Project index"><div class="wrap"><ul class="inline-links">
+  <li><a href="#alzheimers-risk">Alzheimer’s prediction</a></li><li><a href="#myobolica">MYOBOLICA</a></li><li><a href="#quantum-pixel">QPIXL</a></li><li><a href="#chlorofish">ChloroFish</a></li><li><a href="#food-environment-atlas">Food Environment Atlas</a></li>
+</ul></div></nav>
+<section class="section compact" aria-labelledby="featured-projects">
+  <div class="wrap"><h2 class="collection-heading" id="featured-projects">Featured work</h2>
+    <div class="project-list">
+      <article class="project" id="alzheimers-risk">
+        <header><p class="eyebrow">Team project · 2025 · Synthetic data</p><h2>Alzheimer’s Disease Risk Prediction</h2><p class="project-methods">Python · scikit-learn · XGBoost · Optuna</p></header>
+        <div class="project-detail">
+          <p class="project-question">How can a model distinguish diagnoses while making its predictions easier to interpret?</p>
+          <dl class="project-evidence">
+            <div><dt>Problem &amp; approach</dt><dd>Our team compared classification models on synthetic records, tuned hyperparameters and examined feature importance. We also evaluated isotonic and sigmoid probability calibration for exploratory risk assessment.</dd></div>
+            <div><dt>My contribution</dt><dd>I contributed exploratory data analysis and feature-importance notebooks. Model optimization, calibration and competition results are outcomes of the team’s combined work.</dd></div>
+            <div><dt>Team result &amp; limits</dt><dd>The project reports a <strong>93.28% F1 score</strong> for tuned AdaBoost on the Kaggle competition test set. This is a competition result on synthetic data, not clinical validation or evidence of real-world diagnostic performance.</dd></div>
+          </dl>
+          {% include research-figure.html path="/assets/images/projects/alzheimers-feature-importance.jpg" width="3730" height="1200" label="Alzheimer’s feature-importance comparison" alt="AdaBoost and XGBoost feature-importance charts show cognitive assessment measures among the strongest predictors in the synthetic dataset" caption="Original team figure: AdaBoost on the full feature set and XGBoost on the restricted cohort. Predictive importance does not establish causation." %}
+          <p class="credit">Team: Mercy Amankwah, Seyed Abdolhamid Banihashemi and Nasheed Jafri · Erdős Institute, Spring 2025.</p>
+          <ul class="inline-links"><li><a href="https://github.com/mgamankwah/alzheimers_risk_prediction">Repository &amp; evaluation details</a></li><li><a href="https://github.com/mgamankwah/alzheimers_risk_prediction/blob/main/deliverables/Executive%20Summary.pdf">Executive summary (PDF)</a></li><li><a href="https://github.com/mgamankwah/alzheimers_risk_prediction/blob/main/deliverables/Presentation%20Slides.pdf">Team presentation (PDF)</a></li></ul>
+        </div>
+      </article>
+      <article class="project" id="myobolica">
+        <header><p class="eyebrow">Doctoral research · Collaborative publications</p><h2>MYOBOLICA</h2><p class="project-methods">Bayesian inference · MCMC · MATLAB · Biomechanics</p></header>
+        <div class="project-detail">
+          <p class="project-question">Many muscle activation patterns can produce the same movement. Which are plausible, and how uncertain are the estimates?</p>
+          <dl class="project-evidence">
+            <div><dt>Technical approach</dt><dd>Model muscle recruitment as an inverse problem, combine movement-derived evidence with physiological prior assumptions, and explore posterior distributions using Markov chain Monte Carlo sampling.</dd></div>
+            <div><dt>My contribution</dt><dd>My doctoral research developed Bayesian models and computational methods for muscle recruitment and uncertainty quantification. It forms part of the scientific foundation for the collaborative MYOBOLICA work.</dd></div>
+            <div><dt>Research outcome</dt><dd>A dissertation and coauthored studies examine plausible recruitment patterns and variability in muscle control. These are computational research contributions; potential clinical applications require further validation.</dd></div>
+          </dl>
+          {% include research-figure.html path="/Projects_files/myobolica_img.JPG" width="1483" height="675" label="MYOBOLICA estimates" alt="Time-varying muscle activation estimates with uncertainty bands and anatomical leg-muscle diagrams" caption="MYOBOLICA research visualization. Curves describe model estimates and their uncertainty." %}
+          <ul class="inline-links"><li><a href="{{ site.data.portfolio.dissertation }}">Doctoral dissertation</a></li><li><a href="https://doi.org/10.1109/TNSRE.2024.3447791">MYOBOLICA publication</a></li><li><a href="{{ '/research.html' | relative_url }}#bayesian-modeling">Scientific context</a></li></ul>
+        </div>
+      </article>
+      <article class="project" id="quantum-pixel">
+        <header><p class="eyebrow">First-author paper · Collaborative research</p><h2>Quantum Pixel Representation and Compression</h2><p class="project-methods">Quantum algorithms · Circuit synthesis · Image encoding</p></header>
+        <div class="project-detail">
+          <p class="project-question">How can multidimensional images be encoded with fewer quantum circuit resources?</p>
+          <dl class="project-evidence">
+            <div><dt>Technical approach</dt><dd>QPIXL unifies several image representations and uses efficiently synthesized rotation and controlled-NOT circuits. Compression acts on transformed image data to reduce state-preparation gate counts.</dd></div>
+            <div><dt>My contribution</dt><dd>I am the first author of the QPIXL paper and contributed to the quantum image-processing research during my Berkeley Lab internship. The framework, implementation and reported experiments are collaborative outputs.</dd></div>
+            <div><dt>Published result &amp; limits</dt><dd>The paper reports gate-count reductions of up to 90% in compression experiments for example scientific images using FRQI encoding while retaining prominent image features. This is an experimental circuit-resource result, not a universal storage reduction or a demonstrated end-to-end quantum speedup.</dd></div>
+          </dl>
+          {% include research-figure.html path="/Projects_files/qpixl_summary.JPG" width="1304" height="559" label="QPIXL circuits and compression" alt="Original and QPIXL FRQI circuits beside scientific-image examples and gate counts at several compression levels" caption="QPIXL circuit and compression examples. Amankwah et al., Scientific Reports (2022)." %}
+          <ul class="inline-links"><li><a href="https://doi.org/10.1038/s41598-022-11024-y">Publication &amp; experiments</a></li><li><a href="https://github.com/QuantumComputingLab/qpixlpp">QPIXL++ software</a></li><li><a href="{{ '/research.html' | relative_url }}#quantum-computing">Related QCrank research</a></li></ul>
+        </div>
+      </article>
+    </div>
   </div>
-</div>
+</section>
+<section class="section surface" aria-labelledby="additional-projects">
+  <div class="wrap"><h2 class="collection-heading" id="additional-projects">Additional selected work</h2>
+    <div class="project-list">
+      <article class="project" id="chlorofish">
+        <header><p class="eyebrow">Team project · Environmental modeling</p><h2>ChloroFish</h2><p class="project-methods">SEAMAP data · Model comparison · Prediction intervals</p></header>
+        <div class="project-detail">
+          <p>Our team studied links between environmental conditions, chlorophyll measurements and fishery measures using Southeast Area Monitoring and Assessment Program data.</p>
+          <dl class="project-evidence">
+            <div><dt>Approach &amp; my contribution</dt><dd>The team compared regression and machine learning methods, including boosting and neural networks, and explored quantile-based prediction intervals for shrimp catch. My documented contribution is preparation of a modified shrimp dataset.</dd></div>
+            <div><dt>Team evidence</dt><dd>The model-comparison notebook reports validation MSE of <strong>2.4884</strong> for a training-mean baseline and <strong>1.3901</strong> for histogram gradient boosting without feature imputation, predicting the dataset’s total-shrimp-weight target. These results belong to that random holdout evaluation, not an independently tested forecast of future fisheries.</dd></div>
+          </dl>
+          <p class="credit">Erdős Institute Deep Learning Boot Camp team project and New Atlantis Labs Ocean Data Fellowship.</p>
+          <ul class="inline-links"><li><a href="https://github.com/mgamankwah/ChloroFish">Team repository</a></li><li><a href="https://github.com/mgamankwah/ChloroFish/blob/main/models/Model_comparison.ipynb">Evaluation notebook &amp; figures</a></li><li><a href="https://github.com/mgamankwah/ChloroFish/blob/main/models/HistGradBoost_Shrimp.ipynb">Prediction-interval analysis</a></li></ul>
+        </div>
+      </article>
+      <article class="project" id="food-environment-atlas">
+        <header><p class="eyebrow">Team project · Population-level analysis</p><h2>Food Environment Atlas</h2><p class="project-methods">USDA data · Regression · Classification</p></header>
+        <div class="project-detail">
+          <p>Our team examined how food access and socioeconomic indicators relate to county-level diabetes prevalence, using the USDA Food Environment Atlas and 2013 prevalence as the target.</p>
+          <dl class="project-evidence">
+            <div><dt>Technical approach</dt><dd>Exploratory analysis and feature selection informed comparisons of regression and classification models, including linear methods, random forests and gradient boosting.</dd></div>
+            <div><dt>Contribution &amp; outcome</dt><dd>I collaborated on the team project; the repository records my presentation contribution and notebook edits. The team’s analysis identified predictive associations at county level. These observational patterns do not establish individual risk or causal effects.</dd></div>
+          </dl>
+          <p class="credit">Team: Mercy Amankwah, Danielle Brager, Nicole Bruce, Monalisa Dutta and Cyril Dennis Enyi.</p>
+          <ul class="inline-links"><li><a href="https://github.com/db4014/food-atlas-2024">Team repository</a></li><li><a href="https://github.com/db4014/food-atlas-2024/blob/main/docs/Food_Envirionment_Atlas_Presentation.pdf">Presentation &amp; visualizations (PDF)</a></li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
