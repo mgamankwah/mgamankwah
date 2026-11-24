@@ -1,0 +1,52 @@
+---
+layout: default
+title: Research
+description: Bayesian inference, uncertainty quantification, and quantum computing.
+---
+{% include page-heading.html %}
+{% assign orcid = site.data.portfolio.profiles | where: "label", "ORCID" | first %}
+
+<div class="research-nav">
+  <div class="wrap">
+    <ul class="inline-links">
+      <li><a href="{{ '/publications.html' | relative_url }}">Publications</a></li>
+      <li><a href="{{ '/talks.html' | relative_url }}">Talks &amp; presentations</a></li>
+      <li><a href="{{ orcid.url }}">ORCID <span class="arrow arrow-external" aria-hidden="true"></span></a></li>
+    </ul>
+  </div>
+</div>
+
+<section class="section" aria-labelledby="bayesian-modeling">
+  <div class="wrap research-grid">
+    <div class="prose">
+      <h2 id="bayesian-modeling">Bayesian modeling of movement</h2>
+      <p>I completed my PhD in Applied Mathematics at Case Western Reserve University in May 2024. My dissertation studied muscle recruitment during locomotion, an inverse problem in which multiple patterns can explain the same movement. Bayesian modeling helped me describe plausible patterns and quantify uncertainty.</p>
+      <ul class="source-list">
+        <li><a href="{{ site.data.portfolio.dissertation }}">Bayesian Analysis of Muscle Recruitment Patterns in Locomotion</a> <span>· Dissertation</span></li>
+        <li><a href="{{ site.data.portfolio.muscle_recruitment_doi }}">Exploring muscle recruitment by Bayesian methods during motion</a> <span>· Chaos, Solitons &amp; Fractals, 2024</span></li>
+        <li><a href="https://ieeexplore.ieee.org/abstract/document/10643582">Myobolica: a stochastic approach to estimate physiological muscle control variability</a> <span>· IEEE TNSRE, 2024</span></li>
+      </ul>
+    </div>
+    <figure class="research-figure">
+      <img src="{{ '/Projects_files/myobolica_img.JPG' | relative_url }}" width="1483" height="675" alt="Muscle activation curves with uncertainty bands alongside diagrams of leg muscles">
+      <figcaption>Muscle recruitment estimates from the MYOBOLICA project</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section surface" aria-labelledby="quantum-computing">
+  <div class="wrap research-grid">
+    <div class="prose">
+      <h2 id="quantum-computing">Quantum image representation</h2>
+      <p>In collaborative research, I studied how to represent multidimensional image data on quantum systems and use compression to reduce resource requirements. Related work examined vectorized data encodings and computations on trapped-ion and transmon processors.</p>
+      <ul class="source-list">
+        <li><a href="https://www.nature.com/articles/s41598-022-11024-y">Quantum pixel representations and compression for N-dimensional images</a> <span>· Scientific Reports, 2022</span></li>
+        <li><a href="https://www.nature.com/articles/s41598-024-53720-x">Quantum-parallel vectorized data encodings and computations on trapped-ion and transmon QPUs</a> <span>· Scientific Reports, 2024</span></li>
+      </ul>
+    </div>
+    <figure class="research-figure">
+      <img src="{{ '/Projects_files/qpixl_summary.JPG' | relative_url }}" width="1304" height="559" loading="lazy" alt="Quantum image circuits beside sample images at different compression levels">
+      <figcaption>Quantum pixel representation and compression examples</figcaption>
+    </figure>
+  </div>
+</section>

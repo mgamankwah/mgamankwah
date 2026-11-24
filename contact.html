@@ -1,0 +1,22 @@
+---
+layout: default
+title: Contact
+description: Connect about applied AI, enterprise modernization, or research collaborations.
+---
+{% include page-heading.html %}
+
+<div class="section">
+  <div class="wrap">
+    <ul class="contact-list">
+      {% for profile in site.data.portfolio.profiles %}
+        <li>
+          <a href="{{ profile.url }}">
+            <span class="contact-name">{{ profile.label }}</span>
+            <span class="contact-description">{{ profile.description }}</span>
+            <span class="contact-arrow arrow arrow-external" aria-hidden="true"></span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

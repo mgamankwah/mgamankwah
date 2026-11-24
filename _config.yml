@@ -1,0 +1,21 @@
+title: Mercy Amankwah, PhD
+description: Data science, applied AI, enterprise modernization, and scientific research.
+url: https://mgamankwah.github.io
+baseurl: /mgamankwah
+theme: null
+exclude:
+  - AGENTS.md
+  - conf.json
+  - conf.py
+  - css
+  - js
+  - Publications_files
+  - Teaching_filesold
+  - Projects_files/badge
+  - Projects_files/badge-ad564dedf42ea1d9af0b11e450d72874.css
+  - Projects_files/branding.js.download
+  - Projects_files/curvycorners.js.download
+  - Projects_files/defaultstyles.css
+  - img/main_bg.png
+  - img/media
+  - mphil-2-phd.pdf

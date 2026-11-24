@@ -1,0 +1,25 @@
+navigation:
+  - label: Home
+    path: /
+  - label: Experience
+    path: /experience.html
+  - label: Projects
+    path: /projects.html
+  - label: Research
+    path: /research.html
+  - label: About
+    path: /about.html
+  - label: Contact
+    path: /contact.html
+profiles:
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/mercy-amankwah/
+    description: Professional inquiries and connections
+  - label: GitHub
+    url: https://github.com/mgamankwah
+    description: Code and collaborative projects
+  - label: ORCID
+    url: https://orcid.org/0000-0002-5340-7782
+    description: Researcher identifier and scholarly work
+dissertation: http://rave.ohiolink.edu/etdc/view?acc_num=case1711387309757226
+muscle_recruitment_doi: https://doi.org/10.1016/j.chaos.2024.115082

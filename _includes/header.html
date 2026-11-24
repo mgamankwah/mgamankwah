@@ -1,0 +1,14 @@
+<header class="site-header" id="site_header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="{{ '/' | relative_url }}">Mercy Amankwah<span aria-hidden="true">.</span></a>
+    <nav aria-label="Primary">
+      <ul class="site-nav">
+        {% for item in site.data.portfolio.navigation %}
+          <li>
+            <a href="{{ item.path | relative_url }}"{% if page.url == item.path %} aria-current="page"{% elsif page.section == item.path %} class="current-section"{% endif %}>{{ item.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
