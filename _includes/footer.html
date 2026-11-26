@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="wordmark" href="{{ '/' | relative_url }}">Mercy Amankwah<span aria-hidden="true">.</span></a>
+    <nav aria-label="Professional profiles">
+      <ul class="footer-links">
+        {% for profile in site.data.portfolio.profiles %}
+          <li><a href="{{ profile.url }}">{{ profile.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</footer>

@@ -1,0 +1,16 @@
+---
+layout: default
+title: Contact
+description: I welcome opportunities to connect with professionals, researchers, and organizations interested in applied artificial intelligence, enterprise modernization, scientific computing, and interdisciplinary innovation.
+---
+{% include page-heading.html %}
+<section class="section" aria-labelledby="connect"><div class="wrap split-section">
+  <div><h2 id="connect">Let’s connect.</h2><p>LinkedIn is the best place to start a professional conversation. You can also explore my code and scholarly work through GitHub and ORCID.</p></div>
+  <div><ul class="contact-list">
+    {% for profile in site.data.portfolio.profiles %}
+    <li><a href="{{ profile.url }}"><span class="contact-name">{{ profile.label }}</span><span class="contact-description">{{ profile.description }}</span></a></li>
+    {% endfor %}
+  </ul>
+  {% if site.data.portfolio.public_email %}<p class="section-crosslink"><a href="mailto:{{ site.data.portfolio.public_email | escape }}">Email me</a></p>{% endif %}
+  </div>
+</div></section>

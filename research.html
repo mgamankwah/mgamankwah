@@ -1,0 +1,45 @@
+---
+layout: default
+title: Research
+description: Interdisciplinary research in applied mathematics, probabilistic modeling, scientific computing, and quantum information science.
+---
+{% include page-heading.html %}
+{% assign orcid = site.data.portfolio.profiles | where: "label", "ORCID" | first %}
+<nav class="research-nav" aria-label="Research resources"><div class="wrap"><ul class="inline-links"><li><a href="{{ '/publications.html' | relative_url }}">Publications</a></li><li><a href="{{ '/talks.html' | relative_url }}">Talks &amp; presentations</a></li><li><a href="{{ orcid.url }}">ORCID</a></li></ul></div></nav>
+<section class="section" aria-labelledby="bayesian-modeling">
+  <div class="wrap split-section">
+    <h2 id="bayesian-modeling">Bayesian Inverse Problems &amp; Uncertainty Quantification</h2>
+    <div class="prose">
+      <p>Observed movement gives us evidence about muscle activity, but it does not determine a unique recruitment pattern. My doctoral research treats this ambiguity as a Bayesian inverse problem: estimate plausible muscle forces and activations while describing uncertainty in those estimates.</p>
+      <p>Using a computational model of movement, I investigated how physiological prior assumptions shape the inferred recruitment patterns. Markov chain Monte Carlo sampling explores the posterior distributions rather than reducing the answer to one optimal solution. This connects mathematical inference with questions about variability in human motor control.</p>
+      {% include research-figure.html path="/Projects_files/myobolica_img.JPG" width="1483" height="675" label="Muscle recruitment uncertainty" alt="Muscle activation curves surrounded by uncertainty bands, with anatomical diagrams identifying the modeled muscles" caption="Collaborative MYOBOLICA research visualization. The uncertainty bands complement the estimated activation trajectories." %}
+      <ul class="source-list"><li><a href="{{ site.data.portfolio.dissertation }}">Bayesian Analysis of Muscle Recruitment Patterns in Locomotion</a> · PhD dissertation, CWRU, 2024</li><li><a href="{{ site.data.portfolio.muscle_recruitment_doi }}">Exploring muscle recruitment by Bayesian methods during motion</a> · First-author paper, 2024</li><li><a href="https://doi.org/10.1109/TNSRE.2024.3447791">MYOBOLICA: physiological muscle control variability</a> · Collaborative paper, 2024</li></ul>
+      <p class="section-crosslink"><a href="{{ '/projects.html' | relative_url }}#myobolica">See the MYOBOLICA technical overview</a></p>
+    </div>
+  </div>
+</section>
+<section class="section surface" aria-labelledby="quantum-computing">
+  <div class="wrap split-section">
+    <h2 id="quantum-computing">Quantum Computing &amp; Algorithm Development</h2>
+    <div class="prose">
+      <p>Getting classical data into a quantum computation is itself an algorithmic challenge. My collaborative research explores representations and circuit constructions that balance encoding capacity with the resources needed to prepare and process the data.</p>
+      <p><strong>QPIXL</strong> studies multidimensional image representation and compression. <strong>QCrank and QBArt</strong> extend this research direction to vectorized data encoding and computation on trapped-ion and transmon processors. I applied linear algebra to quantum circuit design as part of the collaborative development of these methods.</p>
+      {% include research-figure.html path="/Projects_files/qpixl_summary.JPG" width="1304" height="559" label="Quantum image representations" alt="Comparison of FRQI quantum circuits with example scientific images at different compression levels" caption="QPIXL circuit and image-compression examples. Amankwah et al., Scientific Reports (2022)." %}
+      <ul class="source-list"><li><a href="https://doi.org/10.1038/s41598-022-11024-y">Quantum pixel representations and compression for N-dimensional images</a> · Co-first-author paper, 2022</li><li><a href="https://doi.org/10.1038/s41598-024-53720-x">Quantum-parallel vectorized data encodings and computations on trapped-ion and transmon QPUs</a> · Collaborative paper, 2024</li></ul>
+      <p class="section-crosslink"><a href="{{ '/projects.html' | relative_url }}#quantum-pixel">Explore QPIXL methods, software and experimental results</a></p>
+    </div>
+  </div>
+</section>
+<section class="section" aria-labelledby="hybrid-learning">
+  <div class="wrap split-section"><h2 id="hybrid-learning">Hybrid Quantum-Classical Machine Learning</h2><div class="prose">
+    <p>During my 2023 internship at IonQ, I explored quantum neural networks that combine classical computation with parameterized quantum circuits. Working on a customized model in Python gave me experience investigating how the two computational settings can interact in a learning workflow.</p>
+    <p>This was exploratory internship research. It deepened my interest in the practical choices behind emerging methods: how to formulate a problem, evaluate a model and communicate what the evidence supports.</p><a href="{{ '/experience.html' | relative_url }}#research-experience">Research appointments and background</a>
+  </div></div>
+</section>
+<section class="section surface" aria-labelledby="research-recognition">
+  <div class="wrap split-section"><h2 id="research-recognition">Research recognition</h2><div class="timeline">
+    <article><p class="meta">Berkeley Lab · 2024</p><h3><a href="https://cs.lbl.gov/news-and-events/news/2024/quantum-insights-innovating-data-representation-analysis-and-visualization/">Quantum Insights: Innovating Data Representation, Analysis, and Visualization</a></h3><p>Coverage of our collaboration on quantum data encoding and visualization, including my contributions to quantum circuit research.</p></article>
+    <article><p class="meta">Berkeley Lab · 2023</p><h3><a href="https://cs.lbl.gov/news-and-events/news/2023/berkeley-lab-computing-sciences-takes-novel-approach-to-science-workforce-development-and-diversity/">Science workforce development and diversity</a></h3><p>Berkeley Lab featured my experience in the Sustainable Research Pathways program and how it opened opportunities to explore new scientific fields.</p></article>
+    <article><p class="meta">Berkeley Lab · 2021 · Referenced by CWRU</p><h3>Student Research Opens New Doors in Quantum Image Processing</h3><p>Coverage of my summer quantum image-processing research is referenced in CWRU’s announcement of the QPIXL paper.</p><a href="https://mathstats.case.edu/2022/06/applied-math-phd-student-mercy-amankwah-published-a-first-author-paper-on-quantum-pixel-representations-in-scientific-reports/">Read the CWRU feature and coverage reference</a></article>
+  </div></div>
+</section>

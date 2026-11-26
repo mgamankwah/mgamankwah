@@ -1,339 +1,85 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Mercy Amankwah, PhD.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Mercy Amankwah - Resume / CV / vCard" />
-  <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, portfolio" />
-  <meta name="author" content="lmpixels" />
-  <link rel="shortcut icon" href="favicon.ico">
-
-
-  <link rel="stylesheet" href="css/normalize.css" type="text/css">
-  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-  <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-  <link rel="stylesheet" href="css/main.css" type="text/css">
-
-  <script src="js/modernizr.custom.js"></script>
-</head>
-
-<body class="page">
-
-  <div class="lm-animated-bg"></div>
-
-  <!-- Loading animation -->
-  <div class="preloader">
-    <div class="preloader-animation">
-      <div class="preloader-spinner">
-      </div>
+---
+layout: default
+title: Projects
+description: Technical work connecting predictive models, mathematical methods and scientific questions.
+---
+{% include page-heading.html %}
+<nav class="research-nav" aria-label="Project index"><div class="wrap"><ul class="inline-links">
+  <li><a href="#alzheimers-risk">Alzheimer’s prediction</a></li><li><a href="#myobolica">MYOBOLICA</a></li><li><a href="#quantum-pixel">QPIXL</a></li><li><a href="#chlorofish">ChloroFish</a></li><li><a href="#food-environment-atlas">Food Environment Atlas</a></li>
+</ul></div></nav>
+<section class="section compact" aria-labelledby="featured-projects">
+  <div class="wrap"><h2 class="collection-heading" id="featured-projects">Featured work</h2>
+    <div class="project-list">
+      <article class="project" id="alzheimers-risk">
+        <header><p class="eyebrow">Team project · 2025 · Synthetic data</p><h2>Alzheimer’s Disease Risk Prediction</h2><p class="project-methods">Python · scikit-learn · XGBoost · Optuna</p></header>
+        <div class="project-detail">
+          <p class="project-question">How can a model distinguish diagnoses while making its predictions easier to interpret?</p>
+          <dl class="project-evidence">
+            <div><dt>Problem &amp; approach</dt><dd>Our team compared classification models on synthetic records, tuned hyperparameters and examined feature importance. We also evaluated isotonic and sigmoid probability calibration for exploratory risk assessment.</dd></div>
+            <div><dt>My contribution</dt><dd>I contributed exploratory data analysis and feature-importance notebooks. Model optimization, calibration and competition results are outcomes of the team’s combined work.</dd></div>
+            <div><dt>Team result &amp; limits</dt><dd>The project reports a <strong>93.28% F1 score</strong> for tuned AdaBoost on the Kaggle competition test set. This is a competition result on synthetic data, not clinical validation or evidence of real-world diagnostic performance.</dd></div>
+          </dl>
+          {% include research-figure.html path="/assets/images/projects/alzheimers-feature-importance.jpg" width="3730" height="1200" label="Alzheimer’s feature-importance comparison" alt="AdaBoost and XGBoost feature-importance charts show cognitive assessment measures among the strongest predictors in the synthetic dataset" caption="Original team figure: AdaBoost on the full feature set and XGBoost on the restricted cohort. Predictive importance does not establish causation." %}
+          <p class="credit">Team: Mercy Amankwah, Seyed Abdolhamid Banihashemi and Nasheed Jafri · Erdős Institute, Spring 2025.</p>
+          <ul class="inline-links"><li><a href="https://github.com/mgamankwah/alzheimers_risk_prediction">Repository &amp; evaluation details</a></li><li><a href="https://github.com/mgamankwah/alzheimers_risk_prediction/blob/main/deliverables/Executive%20Summary.pdf">Executive summary (PDF)</a></li><li><a href="https://github.com/mgamankwah/alzheimers_risk_prediction/blob/main/deliverables/Presentation%20Slides.pdf">Team presentation (PDF)</a></li></ul>
+        </div>
+      </article>
+      <article class="project" id="myobolica">
+        <header><p class="eyebrow">Doctoral research · Collaborative publications</p><h2>MYOBOLICA</h2><p class="project-methods">Bayesian inference · MCMC · MATLAB · Biomechanics</p></header>
+        <div class="project-detail">
+          <p class="project-question">Many muscle activation patterns can produce the same movement. Which are plausible, and how uncertain are the estimates?</p>
+          <dl class="project-evidence">
+            <div><dt>Technical approach</dt><dd>Model muscle recruitment as an inverse problem, combine movement-derived evidence with physiological prior assumptions, and explore posterior distributions using Markov chain Monte Carlo sampling.</dd></div>
+            <div><dt>My contribution</dt><dd>My doctoral research developed Bayesian models and computational methods for muscle recruitment and uncertainty quantification. It forms part of the scientific foundation for the collaborative MYOBOLICA work.</dd></div>
+            <div><dt>Research outcome</dt><dd>A dissertation and coauthored studies examine plausible recruitment patterns and variability in muscle control. These are computational research contributions; potential clinical applications require further validation.</dd></div>
+          </dl>
+          {% include research-figure.html path="/Projects_files/myobolica_img.JPG" width="1483" height="675" label="MYOBOLICA estimates" alt="Time-varying muscle activation estimates with uncertainty bands and anatomical leg-muscle diagrams" caption="MYOBOLICA research visualization. Curves describe model estimates and their uncertainty." %}
+          <ul class="inline-links"><li><a href="{{ site.data.portfolio.dissertation }}">Doctoral dissertation</a></li><li><a href="https://doi.org/10.1109/TNSRE.2024.3447791">MYOBOLICA publication</a></li><li><a href="{{ '/research.html' | relative_url }}#bayesian-modeling">Scientific context</a></li></ul>
+        </div>
+      </article>
+      <article class="project" id="quantum-pixel">
+        <header><p class="eyebrow">Co-first-author paper · Collaborative research</p><h2>Quantum Pixel Representation and Compression</h2><p class="project-methods">Quantum algorithms · Circuit synthesis · Image encoding</p></header>
+        <div class="project-detail">
+          <p class="project-question">How can multidimensional images be encoded with fewer quantum circuit resources?</p>
+          <dl class="project-evidence">
+            <div><dt>Technical approach</dt><dd>QPIXL unifies several image representations and uses efficiently synthesized rotation and controlled-NOT circuits. Compression acts on transformed image data to reduce state-preparation gate counts.</dd></div>
+            <div><dt>My contribution</dt><dd>As co-first author, I jointly conducted and analyzed computational experiments evaluating quantum image representations and compression methods. The framework, implementation and reported experiments are collaborative outputs.</dd></div>
+            <div><dt>Published result &amp; limits</dt><dd>The paper reports gate-count reductions of up to 90% in compression experiments for example scientific images using FRQI encoding while retaining prominent image features. This is an experimental circuit-resource result, not a universal storage reduction or a demonstrated end-to-end quantum speedup.</dd></div>
+          </dl>
+          {% include research-figure.html path="/Projects_files/qpixl_summary.JPG" width="1304" height="559" label="QPIXL circuits and compression" alt="Original and QPIXL FRQI circuits beside scientific-image examples and gate counts at several compression levels" caption="QPIXL circuit and compression examples. Amankwah et al., Scientific Reports (2022)." %}
+          <ul class="inline-links"><li><a href="https://doi.org/10.1038/s41598-022-11024-y">Publication &amp; experiments</a></li><li><a href="https://github.com/QuantumComputingLab/qpixlpp">QPIXL++ software</a></li><li><a href="{{ '/research.html' | relative_url }}#quantum-computing">Related QCrank and QBArt research</a></li></ul>
+        </div>
+      </article>
     </div>
   </div>
-  <!-- /Loading animation -->
-
-  <!-- Scroll To Top Button -->
-  <div class="lmpixels-scroll-to-top"><i class="lnr lnr-chevron-up"></i></div>
-  <!-- /Scroll To Top Button -->
-
-  <div class="page-scroll">
-    <div id="page_container" class="page-container bg-move-effect" data-animation="transition-flip-in-right">
-
-      <!-- Header -->
-      <header id="site_header" class="header">
-        <div class="header-content clearfix">
-
-          <!-- Text Logo -->
-          <div class="text-logo">
-            <a href="index.html">
-              <div class="logo-symbol">MA</div>
-              <div class="logo-text">Mercy <span>Amankwah</span></div>
-            </a>
-          </div>
-          <!-- /Text Logo -->
-
-          <!-- Navigation -->
-          <div class="site-nav mobile-menu-hide">
-            <ul class="leven-classic-menu site-main-menu">
-              <li class="menu-item">
-                <a href="index.html">About Me</a>
-              </li>
-
-              <li class="menu-item current-menu-item">
-                <a href="publications.html">Publications</a>
-              </li>
-
-              <li class="menu-item">
-                <a href="projects.html">Projects</a>
-              </li>  
-
-              <!-- <li class="menu-item">
-                <a href="awards.html">Awards</a>
-              </li>  -->
-
-              <li class="menu-item">
-                <a href="talks.html">Presentations</a>
-              </li>  
-
-              <!-- <li class="menu-item">
-                <a href="media.html">Media</a>
-              </li>  -->
-
-              <!-- <li class="menu-item">
-                <a href="speaking.html">Speaking</a>
-              </li>  -->
-            </ul>
-          </div>
-
-          <!-- Mobile Menu Toggle -->
-          <a class="menu-toggle mobile-visible">
-            <i class="fa fa-bars"></i>
-          </a>
-          <!-- Mobile Menu Toggle -->
+</section>
+<section class="section surface" aria-labelledby="additional-projects">
+  <div class="wrap"><h2 class="collection-heading" id="additional-projects">Additional selected work</h2>
+    <div class="project-list">
+      <article class="project" id="chlorofish">
+        <header><p class="eyebrow">Team project · Environmental modeling</p><h2>ChloroFish</h2><p class="project-methods">SEAMAP data · Model comparison · Prediction intervals</p></header>
+        <div class="project-detail">
+          <p>Our team studied links between environmental conditions, chlorophyll measurements and fishery measures using Southeast Area Monitoring and Assessment Program data.</p>
+          <dl class="project-evidence">
+            <div><dt>Approach &amp; my contribution</dt><dd>The team compared regression and machine learning methods, including boosting and neural networks, and explored quantile-based prediction intervals for shrimp catch. I contributed to data preparation for shrimp population modeling, including a modified shrimp dataset.</dd></div>
+            <div><dt>Team evidence</dt><dd>The model-comparison notebook reports validation MSE of <strong>2.4884</strong> for a training-mean baseline and <strong>1.3901</strong> for histogram gradient boosting without feature imputation, predicting the dataset’s total-shrimp-weight target. These results belong to that random holdout evaluation, not an independently tested forecast of future fisheries.</dd></div>
+          </dl>
+          <p class="credit">Erdős Institute Deep Learning Boot Camp team project and New Atlantis Labs Ocean Data Fellowship.</p>
+          <ul class="inline-links"><li><a href="https://github.com/mgamankwah/ChloroFish">Team repository</a></li><li><a href="https://github.com/mgamankwah/ChloroFish/blob/main/models/Model_comparison.ipynb">Evaluation notebook &amp; figures</a></li><li><a href="https://github.com/mgamankwah/ChloroFish/blob/main/models/HistGradBoost_Shrimp.ipynb">Prediction-interval analysis</a></li></ul>
         </div>
-      </header>
-      <!-- /Header -->
-
-      <div id="main" class="site-main">
-        <div id="main-content" class="single-page-content">
-          <div id="primary" class="content-area">
-
-            <div class="page-title" style="text-align: center; padding: 40px 70px;">
-              <h1>Projects</h1>
-              <div class="page-subtitle">
-                <!-- <h4> 8 Years of Experience</h4> -->
-              </div>
-            </div>
-            <div id="content" class="page-content site-content single-post" role="main">
-
-              <!-- Services -->
-              <div class="row">
-                <div class="col-xs-12 col-sm-12">
-                  <div class="p-10"></div>
-
-                  <div class="block-title">
-                    <h2>Quantum pixel representations and compression for N-dimensional images</h2>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                  <div class="info-list-w-icon">
-                    <div class="info-block-w-icon">
-                      <!-- <div class="ci-icon">
-                          <i class="linecons linecons-pen"></i>
-                        </div> -->
-
-                      <div class="ci-text">
-                        <!-- <h4>Copywrite</h4> -->
-                        <p>We introduce a comprehensive framework known as the <em>Quantum Pixel Representation</em> (QPIXL), which encompasses all previously established quantum image representations and potentially many more.</p>
-                        <p>Additionally, we present a novel technique for preparing QPIXL representations that requires fewer quantum gates compared to earlier methods, without the need for ancilla qubits. This approach utilizes an efficient synthesis technique for uniformly controlled rotations, employing only <span style="font-family: monospace;">RY</span> and controlled-NOT (<span style="font-family: monospace;">CX</span>) gates, making the circuits practical for the NISQ era.</p>
-                        <p>For instance, the original FRQI state preparation method for an image with <span style="font-family: monospace;">N = 2<sup>n</sup></span> grayscale pixels uses <span style="font-family: monospace;">n+1</span> qubits in total (i.e., <span style="font-family: monospace;">n</span> qubits for encoding the position and 1 qubit for the color) and has a gate complexity of <span style="font-family: monospace;">O(N<sup>2</sup>)</span>. Recent improvements have reduced the FRQI gate complexity to <span style="font-family: monospace;">O(N log<sub>2</sub>N)</span> by introducing several extra ancilla qubits.</p>
-                        <p>In contrast, our QPIXL method for preparing an FRQI state achieves a gate complexity of <span style="font-family: monospace;">O(N)</span> without requiring additional ancilla qubits. Moreover, we introduce a compression strategy to further reduce the gate complexity of QPIXL representations.</p>                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6">
-                  <div class="ci-text">
-                    <img src="./Projects_files/qpixl_summary.JPG" align="center">                    
-                        <p>Our experiments demonstrate that this compression algorithm can reduce the gate complexity by up to 90% without significantly compromising image quality.</p>
-                        <p>An implementation of our algorithms is publicly available as part of the Quantum Image Pixel Library (<span style="font-family: monospace;">QPIXL++</span>), accessible at <a href="https://github.com/QuantumComputingLab" target="_blank">QPIXL++</a>. </p>
-                  </div>
-                </div>
-              </div>
-              <!-- /Services -->
-
-              <!-- Services -->
-              <div class="row">
-                <div class="col-xs-12 col-sm-12">
-                  <div class="p-10"></div>
-
-                  <div class="block-title">
-                    <h2>Quantum-parallel vectorized data encodings and computations on trapped-ion and transmon QPUs</h2>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                  <div class="ci-text">
-                    <img src="./Projects_files/Qcrank.JPG" align="center">                    
-
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                  <div class="info-list-w-icon">
-                    <div class="info-block-w-icon">
-                      <!-- <div class="ci-icon">
-                          <i class="linecons linecons-pen"></i>
-                        </div> -->
-
-                      <div class="ci-text">
-                        <!-- <h4>Copywrite</h4> -->
-                        <p>This project makes significant contributions to the problem of data encoding and the development of efficient quantum data analysis algorithms.</p>
-                        <p>Firstly, we introduce an extension of the uniformly controlled rotation technique, allowing for the concurrent execution of elementary quantum gates on both address and data qubits. Building on this innovative concept, we propose two new data encoding schemes: <span style="font-family: monospace;">QCRank</span> for continuous data and <span style="font-family: monospace;">QBart</span> for discrete data in binary representation.</p>
-                        <p>Secondly, we demonstrate a series of data encoding and analysis experiments using real quantum processors on an unprecedented scale. These experiments include the implementation of a Quantum Read Only Memory (QROM) applied to various data types such as images, DNA sequences, and time-series.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-              </div>
-              <!-- /Services -->
-
-              <div class="row">
-                <div class="col-xs-12 col-sm-12">
-                  <div class="p-10"></div>
-
-
-
-                  <div class="block-title">
-                    <h2> MYOBOLICA : Muscle recruitment analysis tool based on Bayesian statistics techniques</h2>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                  <div class="info-list-w-icon">
-                    <div class="info-block-w-icon">
-                      <!-- <div class="ci-icon">
-                          <i class="linecons linecons-pen"></i>
-                        </div> -->
-
-                      <div class="ci-text">
-                        <!-- <h4>Copywrite</h4> -->
-                        <h2>Project Summary</h2>
-                        <p>This project investigates the redundancy of the human musculoskeletal system, where the number of muscles exceeds the number of degrees of freedom. This redundancy allows for the performance of motor tasks in infinitely many different ways, which is essential for the system's adaptability under varying external or internal conditions, including different diseased states.</p>
-
-                        <p>A central issue in biomechanics is understanding how the complex interplay between the central nervous system and the musculoskeletal system selects normal activation patterns and how these patterns change under abnormal conditions such as neurodegenerative diseases and aging.</p>
-
-                        <p>To address this question, this work establishes a mathematical foundation based on Bayesian probabilistic modeling of the musculoskeletal system. Using Lagrangian dynamics, we translate observations of a subject's movement during a task into a time series of equilibria, forming the likelihood model. Various prior models, corresponding to biologically motivated assumptions about muscle dynamics and control, are introduced.</p>
-
-                        <p>We derive and explore the posterior distributions of muscle activations using Markov chain Monte Carlo (MCMC) sampling techniques. By comparing the model predictions with actual observations, we can analyze the different priors and gain insights into muscle dynamics and control mechanisms.</p>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6">
-                  <div class="ci-text">
-                    <img src="./Projects_files/myobolica_img.JPG" align="center">
-                    <p><h4>Highlights</h4>
-                      <ul>
-                        <li>We introduce a Bayesian approach to investigate muscle recruitment.</li>
-                        <li>Markov chain Monte Carlo (MCMC) is used to explore feasible solutions.</li>
-                        <li>Longitudinal priors ensure smooth activation trajectories.</li>
-                        <li>Potential applications include surgical planning and rehabilitation.</li>
-                      </ul>
-                       <a
-                        href="https://www.sciencedirect.com/science/article/pii/S0960077924006349" target="new"> Paper.</a> </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Services -->
-              <div class="row">
-                <div class="col-xs-12 col-sm-12">
-                  <div class="p-10"></div>
-
-
-                  <div class="block-title">
-                    <h2>Predicting Diabetes Rates using the Food Environment Atlas</h2>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                  <div class="info-list-w-icon">
-                    <div class="info-block-w-icon">
-                      <!-- <div class="ci-icon">
-                          <i class="linecons linecons-pen"></i>
-                        </div> -->
-
-                      <div class="ci-text">
-                        <!-- <h4>Copywrite</h4> -->
-                        <p>In this project, we develop predictive regression and classification models to forecast diabetes rates 
-                          across different regions of the United States and identify key contributing factors. Utilizing data science
-                           tools, we predict diabetes rates based on various food environment indicators, including poverty rate, 
-                           access to SNAP benefits, food stores, restaurants, and other community characteristics related to food,
-                            health, nutrition, physical activities, and socioeconomic status.</p>
-                            <p>We use data from the <a href="https://www.ers.usda.gov/data-products/food-environment-atlas/" target="_blank">Food Environment Atlas</a> 
-                              to make these predictions. This project holds significant value for health agencies and local governments, enabling them to allocate resources
-                               more efficiently and advocate for improved access to healthy food.                              
-                            <a
-                            href="https://www.erdosinstitute.org/_files/ugd/26336b_3a43cfbb2c0943259475634414cf251f.pdf" target="new"> Executive Summary</a>,
-                          <a href="https://github.com/db4014/food-atlas-2024" target = "new" > Code </a>.</p> 
-                            <p>  .  </p>                       
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6">
-                  <div class="ci-text">
-                    <img src="./Projects_files/dsbc_proj1.png" align="center">
-                    
-                  </div>
-                </div>
-              </div>
-
-
-              <!-- Services -->
-              <div class="row">
-                <div class="col-xs-12 col-sm-12">
-                  <div class="p-10"></div> 
-
-
-                  <!-- Footer -->
-                  <footer class="site-footer clearfix">
-                    <div class="footer-social">
-                      <ul class="footer-social-links">
-                        <li><a href="https://scholar.google.com/citations?user=-MZ1OlcAAAAJ&hl=en&authuser=4" target="_blank">Google Scholar</a></li>
-            
-                        <li><a href="https://github.com/mgamankwah" target = "_blank">GitHub</a></li>
-            
-                        <li><a href="https://www.researchgate.net/profile/Mercy-Amankwah-2/research" target = "_blank">ResearchGate</a></li>
-            
-                        <li>
-                          <a href="https://twitter.com/mercy_ladyjulia" target = "_blank">Twitter</a>
-                        </li>
-            
-                        <li>
-                          <a href="https://www.kaggle.com/mercygamankwah" target="_blank">kaggle</a>
-                        </li>
-            
-                        <li>
-                          <a href="https://www.linkedin.com/in/mercy-amankwah/" target="_blank">LinkedIn</a>
-                        </li>
-                      </ul>
-                    </div>
-            
-                    <div class="footer-copyrights">
-                      <p>© <a href="https://case.edu/" target="new">Case Western Reserve University</a></p>
-                    </div>
-                  </footer>
-                  <!-- /Footer -->
-
-                </div>
-              </div>
-              <script src="js/jquery-2.1.3.min.js"></script>
-              <script src="js/imagesloaded.pkgd.min.js"></script>
-              <script src="js/bootstrap.min.js"></script>
-              <script src='js/jquery.shuffle.min.js'></script>
-              <script src='js/masonry.pkgd.min.js'></script>
-              <script src='js/owl.carousel.min.js'></script>
-              <script src="js/jquery.magnific-popup.min.js"></script>
-              <script src="js/validator.js"></script>
-              <script src="js/main.js"></script>
-</body>
-
-</html>
+      </article>
+      <article class="project" id="food-environment-atlas">
+        <header><p class="eyebrow">Team project · Population-level analysis</p><h2>Food Environment Atlas</h2><p class="project-methods">USDA data · Regression · Classification</p></header>
+        <div class="project-detail">
+          <p>Our team examined how food access and socioeconomic indicators relate to county-level diabetes prevalence, using the USDA Food Environment Atlas and 2013 prevalence as the target.</p>
+          <dl class="project-evidence">
+            <div><dt>Technical approach</dt><dd>Exploratory analysis and feature selection informed comparisons of regression and classification models, including linear methods, random forests and gradient boosting.</dd></div>
+            <div><dt>Contribution &amp; outcome</dt><dd>I contributed to the team’s analytical notebooks and presentation of findings. The team’s analysis identified predictive associations at county level. These observational patterns do not establish individual risk or causal effects.</dd></div>
+          </dl>
+          <p class="credit">Team: Mercy Amankwah, Danielle Brager, Nicole Bruce, Monalisa Dutta and Cyril Dennis Enyi.</p>
+          <ul class="inline-links"><li><a href="https://github.com/db4014/food-atlas-2024">Team repository</a></li><li><a href="https://github.com/db4014/food-atlas-2024/blob/main/docs/Food_Envirionment_Atlas_Presentation.pdf">Presentation &amp; visualizations (PDF)</a></li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

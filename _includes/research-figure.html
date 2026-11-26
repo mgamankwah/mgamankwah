@@ -1,0 +1,6 @@
+<figure class="research-figure {{ include.class }}">
+  <a class="figure-link" href="{{ include.path | relative_url }}" aria-label="View full-resolution figure: {{ include.label | escape }}">
+    <img src="{{ include.path | relative_url }}" width="{{ include.width }}" height="{{ include.height }}" loading="lazy" alt="{{ include.alt | escape }}">
+  </a>
+  <figcaption>{{ include.caption }} <a href="{{ include.path | relative_url }}">View full resolution<span class="visually-hidden">: {{ include.label }}</span></a>.</figcaption>
+</figure>

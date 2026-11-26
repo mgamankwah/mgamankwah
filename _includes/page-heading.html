@@ -1,0 +1,7 @@
+<header class="page-heading">
+  <div class="wrap">
+    {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="page-deck">{{ page.description }}</p>{% endif %}
+  </div>
+</header>
