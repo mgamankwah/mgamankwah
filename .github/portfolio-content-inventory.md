@@ -1,5 +1,7 @@
 # Portfolio content inventory
 
+> **Phase 4 supplement (November 26, 2026):** See [Phase 4 reconciliation](portfolio-phase-4.md) for the owner-approved decisions and focused accuracy changes. It supersedes conflicting historical holds; keep earlier records for provenance.
+
 > **Phase 3B supplement (November 24, 2026):** See the [Phase 3B evidence register and outstanding decisions](portfolio-phase-3b.md) for verified project metrics, current publication metadata, research coverage, education holds and the historical PDF privacy audit. It supersedes earlier pending checks only where explicitly documented; remaining holds continue.
 
 Phase 2 sources include the owner's approved brief, the site and PDFs at Phase 1 commit `551db40`, and read-only Git inspection of the three linked project repositories. Source locations below identify evidence without reproducing contact details from documents.
